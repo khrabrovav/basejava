@@ -34,6 +34,21 @@ public class ArrayStorage {
     }
 
     void delete(String uuid) {
+        /*
+        Метод удаляет элемент с соответствующим uuid из массива и сдвигает
+        остальные элементы влево. Затем последнему элементу присваивает null
+        */
+        for (int i = 0; i < this.size(); i++) {
+            if (this.storage[i].uuid.equals(uuid)) {
+                int new_size = this.size() - 1;
+                this.storage[i] = null;
+                for (int y = i; y < new_size; y++) {
+                    this.storage[y] = this.storage[y + 1];
+                }
+                this.storage[new_size] = null;
+                break;
+            }
+        }
     }
 
     /**
