@@ -63,6 +63,14 @@ public class ArrayStorage {
     }
 
     int size() {
+        /*
+        Возвращает размер массива или его последний индекс не равный null
+        */
+        for (int i = 0; i <= 10000; i++) {
+            if (this.storage[i] == null) {
+                return i;
+            }
+        }
         return 0;
     }
 }
