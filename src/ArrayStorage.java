@@ -21,6 +21,15 @@ public class ArrayStorage {
     }
 
     Resume get(String uuid) {
+        /*
+        Возвращает элемент массива, у которого uuid равен параметру метода.
+        Если такого элемента нет - возвращает null
+        */
+        for (int i = 0; i < this.size(); i++) {
+            if (this.storage[i].uuid.equals(uuid)) {
+                return storage[i];
+            }
+        }
         return null;
     }
 
