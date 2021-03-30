@@ -5,6 +5,12 @@ public class ArrayStorage {
     Resume[] storage = new Resume[10000];
 
     void clear() {
+        /*
+        Метод пробегает по всем не null элементам массива и делает их null
+        */
+        for (int i = 0; i < this.size(); i++) {
+            this.storage[i] = null;
+        }
     }
 
     void save(Resume r) {
