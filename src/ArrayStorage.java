@@ -13,7 +13,11 @@ public class ArrayStorage {
         }
     }
 
-    void save(Resume r) {
+    void save(Resume resume) {
+        /*
+        Метод записывает в последний не null элемент массива объект resume
+        */
+        this.storage[this.size()] = resume;
     }
 
     Resume get(String uuid) {
